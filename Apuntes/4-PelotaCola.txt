@@ -1,0 +1,35 @@
+2 fotogramas antes del impacto esta normal                    (Con D pintas)
+en el impacto achatarla
+2 fotogramas despues vuelve a estar normal
+
+Para crear un RIG para la pelota y poder estirarla y encogerla:
+Crear un empty y situarlo en la base de la pelota. El empty
+sera el padre de la pelota y sera el que se mueva, la pelota va 
+como un pasajero y rota. El empty es el que se mueve y se encoge,
+y al estar en la base de la pelota el escalado sale bien directamente.
+
+Hacer un driver para que la escala que se pierde al estrecharla en z
+se recupere en x e y -> scaleX = (1/scaleZ)/2   scaleY = (1/scaleZ)/2
+en la escala click derecho->drivers->manually create (single) y se pondra en morado
+abrir el graph editor y poner modo drivers en vez de F curve, seleccionamos el
+driver a la izq (escala x en este caso) y le damos a drivers en la seccion de la 
+derecha. User prefs->file->auto run python scripts para que se quite el aviso de error
+creamos una variable que sera z scale en espacio local del objeto empty. Poner que la
+expresion de la escala x sea (1/variable)/2 -> hacer lo mismo con la y
+
+0 salta->20 llega y pega saltito->30 llega y salta-> 50llega y pega saltito->60 llega y coge impulso
+75 salta tras coger impulso-> 105 lo mismo->135 salta->150 llega arriba y salta
+170 llega al destino
+
+primero hacer todo eso con botes normales sobre empty. Despues hacer estiramiento y encogimiento
+tambien sobre empty->apecto normal hasta dos fps antes del impacto, mas estrecho en el impacto,
+como antes 2 fps despues y recuperamos normalidad en lo mas alto del salto. Si los saltos son muy
+altos la pelota se alarga a mitad del salto
+Quitar todos los keyframes de scale x y scale y del graph editor (solo nos quedamos con scale z)
+
+2 fps antes del impacto->cola totalmente estirada hacia arriba
+momento de impacto->cola totalmente estirada hacia arriba
+2 fps despues del impacto->cola totalmente encogida hacia abajo
+alto del salto->normal
+
+hacer que se caiga y rebote el ultimo obstaculo al ser tocado por el impulso

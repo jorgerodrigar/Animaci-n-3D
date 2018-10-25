@@ -1,0 +1,26 @@
+user prefs-> editing->only insert needed
+usar auto key->boton rojo de debajo
+25 se cae del primero, 35 llega al segundo, 45 bote en el segundo, 65 cae del segundo,
+75 llega al suelo, 81 primer bote en suelo, 85 segundo bote en el suelo, 100 se para
+
+0-25
+eliminar la curva entera de las y en el graph editor, tocar curva de las z para que empiece
+acelerando y caiga sin decelerar (dos primeros puntos). La curva de la x debera ser igual
+(sale igual pero boca abajo). Ir tocando ambas para que el movimiento quede recto->pinchas en un
+tramo y vas modificando tangencias hasta que veas que la pelota hace lo que quieres.
+
+25-35
+free del vertice de llegar abajo en z para que caiga sin decelerar. Lo mismo en x pero haciendo que la
+vel se mantenga al caer (no acelere ni decelere).
+
+35-45
+hacer que sea un bote normal (en x debe frenarse horizontalmente)
+
+45-65
+en z en horizontal al principio y acelerando al final, en x igual. Ir tocando ambas para que el 
+movimiento quede recto.
+
+los demas son botes normales y rodar como la semana pasada (la x debe ser recta hasta el final que 
+decelera->borrar puntos intermedios). Hacerla rodar.
+
+hacerlo con los planos cambiados e implicando una pelota de acero y otra de playa

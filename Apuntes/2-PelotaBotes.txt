@@ -1,0 +1,10 @@
+registramos x y z abajo a la izq
+10 fps mas adelante lo mismo pero arriba
+10 fps abajo y a la derecha
+barra de animacion a la izq en tool bar->motion path para que se pinte la trayectoria del objeto
+en graph editor modificar la anim de las x y hacer que sea un tramo lineal y quitar el punto del
+medio (supr). Nos vamos a la curva de las z y quitar el despegue suave y la deceleracion del final
+de forma que quede la curva como un arco. Quitar el punto de arriba y reproducirlo moviendo las curvas de
+abajo (cuantos menos vertices tenga una curva mejor).
+los botes seran de 20, 16, 14 y 10 frames. Luego rueda por el suelo 15 frames
+alturas 10, 7, 5, 3

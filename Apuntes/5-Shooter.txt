@@ -1,0 +1,50 @@
+8 frames de ejemplo
+
+1 posicion inicial
+1-5 'muestra' el arma
+5-10 accionamos con pulgar
+10-15 cargador
+15-25 la otra mano localiza el nuevo cargador (fuera del encuadre) y espera
+25-35 mano izq carga el cargador
+35-45 mano izq se situa sobrfe el arma
+45-55 amartilla
+55-65 volvemso a apuntar (posicion inicial)
+65-75 se produce el disparo
+75-85 disparo
+
+duplicamos la posicion 0 en el dope sheet (shift D) y la ponemos en la posicion 1
+trabajaremos sobre esta y nos guardaremos la otra por si queremos echarnos atras
+
+en esa posicion 1 le hacemos agarrando la pistola y con la mano izq sosteniendo por
+debajo->seleccionar direccion y rotacion a la vez pulsando shift
+
+para 'encarar' la pistola->rotar la muñeca y el codo para mostrarla y la de abajo baja
+y sale del encuadre
+
+accionar con pulgar para soltar el cargador->guardamos la rotacion del pulgar del fotograma
+5 y lo movemos hasta el 10
+
+el cargador cae->guardamos su desplazamiento del fotograma 10 y hacemos que caiga hasta el 15
+(sale de encuadre y lo posicionamos en la palma de la mano izq)
+
+copiamos la situacion actual en el 25
+
+metemos al cargador en el fps 35 y hacemos que la mano izq le vaya acompañando
+
+guardamos pos y rot del 35 y hasta el 45 movemos la muñeca para mostrar la parte de arriba
+de la pistola y posicionamos la mano izq encima->guardamos una posicion intermedia de la 
+izq para que no atraviese la pistola al subir
+
+guardamos pos del percutor y hasta el 55 lo echamos hacia atras al igual que la mano izq
+percutor hacia delante
+
+guardar pos y rot de ambas manos, copiar el primer fotograma y situarlo en el 65 para que vuelva a la pos inicial
+poner una pos intermedia para que la mano izquierda no atraviese
+
+duplicamos y ponemos en el 70-> en el 67 poner retroceso hacia arriba (el percutor hacia atras) y hacer que el casquillo 
+salga (en el 70 fuera de encuadre)
+71 replica del 65 con la bala otra vez metida
+
+duplicar todos estos fps para hacer que dispare mas veces
+
+romper tangentes de las anim necesarias y retocar los tiempos para que quede mas natural

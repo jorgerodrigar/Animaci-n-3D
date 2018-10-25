@@ -1,0 +1,34 @@
+click derecho en las coord insert single keyframe
+cambiar en linea de tiempo con click derecho y mover el objeto
+hacer lo mismo con la nueva x
+
+
+
+1-posicion en el tiempo
+2-cambiamos en el espacio
+3-insert key frame
+
+
+abajo a la i<q en el relojito-> dopesheet para que salgan los frames
+graph editor aceleraciones, seleccionamos tramo y pulsamos T linear para hacer que el despl sea a vel const.
+con bezier curva->horizontalidad lentitud, verticalidad rapidez
+en end ponemos hasta que fotograma queremos que llegue
+si pulsas en un tramo y V->free libera los tramos para hacer picos, align los une para hacer curvas
+ctrl click derecho en un punto de la curva->creamos un nuevo tramo
+
+
+en render (camarita) en vez de png FFmpeg video->render animation y se guarda donde le mandes
+
+250frames para la practica
+crear empty en el centro que va a ser el padre de todas las piezas (seleccionar todo el helicoptero y despues el empty y ctrl+P)
+emparentar ruedas a trenes de aterrizaje
+0-125 helices-> en el 125 poner 5 vueltas x -360 cada vuelta
+graph editor quitar deceleracion al llegar al 125
+ir al fotograma 250 crear otro tramo y bajarlo y ponerlo en lineal para que se mantenga a esa velocidad
+lo mismo con la helice pequeña pero que empiecen un poco despues
+125-250 despegue
+mover en y y en z el empty
+mover el tren de aterrizaje en 10 frames hacia abajo
+rotar hacia delante el helicoptero y moverlo hacia delante en el final
+meter sonido-> video secuence editor y arrastrar ahi el audio, tocar parametro volume y animarlo tambien
+ver en pestaña render/encoding si audio codec tiene puesto mp3

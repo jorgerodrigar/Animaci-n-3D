@@ -1,0 +1,11 @@
+ctrl alt q vista cuadruple
+g x y z bloquear en esa direccion
+shift d duplicar
+shift para seleccionar varios
+ctrl p haces padre al ultimo seleccionado
+desunirlos en la barra de escena
+en tools join para hacerlos el mismo objeto
+a seleccionamos todo
+b seleccion rectangular
+c circle selection
+ctrl boton secundario del raton seleccion personalizada
