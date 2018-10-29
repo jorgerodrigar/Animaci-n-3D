@@ -1,0 +1,5 @@
+poner modo pose
+
+copiar el ultimo y hacer que se reproduzca hasta uno antes
+
+mover las caderas y la cabeza (de forma ciclica y sin golpes)
