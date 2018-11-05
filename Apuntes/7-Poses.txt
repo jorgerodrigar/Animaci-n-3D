@@ -1,0 +1,14 @@
+Poses:
+hacer render con combined (normal) y ver con indexOb para ver la silueta. Guardarlo
+de las dos formas.
+
+Abrir el primero en ps. Arrastramos el segundo a la pestaña de documentos (encima de la
+imagen del primero), seleccionamos todo, copiamos y pegamos en el primero. Transformar 
+(ctrl T) y poner en una esquina. Imagen->ajustes->Invertir para que quede negro sobre blanco. 
+Hacer caja de texto escribiendo la pose que hemos pretendido simular. Guardar como jpg para
+web para que ocupe menos.
+
+Hacer esto con 5 poses
+
+Alt+G devuelve el hueso a su posicion inicial
+Alt+R o Alt+S lo mismo pero con su rotacion y escala
