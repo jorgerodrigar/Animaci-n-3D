@@ -1,0 +1,19 @@
+Caminado completo                                  Richard Williams
+
+Bajarle los brazos
+
+1-Hacerle dando un paso (pie trasero de puntillas y bajarle el cuerpo un poco). 
+Girar la cadera para que esa pierna parezca adelantada. Proyectar hacia delante el hombro contrario.
+Poner cabeza centrada (girando el hueso del cuello). Adelantamos el brazo contrario y atrasamos el
+otro (el adelantado ligeramente flexionado y el atrasado estirado)
+
+4-Brazo que va hacia delante mano hacia atras, brazo que va hacia atras mano hacia delante. Si lleva 
+un objeto en la mano ponerle hacia delante o atras unos fps despues que la mano (7 por ejemplo)
+
+7-restaurar posiciones del pie y hacer que pise completamente (el otro pie y el cuerpo ligeramente levantado)
+
+13-Simetrico al 1
+
+19-Simetrico del fps 7
+
+25-Replica del fps 1
