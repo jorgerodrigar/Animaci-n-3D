@@ -1,0 +1,29 @@
+Ciclo de carrera:                                        Si escalas el DopeSheet puedes acortar o alargar la animacion
+
+-bajar los brazos y cerrar los puños (de active a single origin para que el dedo se cierre por completo)
+-frame 1->una pierna estirada hacia delante y otra flexionada hacia atras. Cuerpo inclinado hacia delante
+y cabeza de frente. Brazos al reves (brazo hacia atras estirado y hacia delante flexionado). Girar la cadera
+de la pierna que avanza y el hombro opuesto. La cabeza se mantiene recta
+-frame 3->como el frame1 pero el cuerpo mas abajo y el pie completamente en el suelo
+-frame 5->pie que estaba hacia delante pisa el suelo y esta de puntillas (subir cuerpo). Mientras el otro pie
+comienza a dar el paso (por delante de la otra pierna)
+-frame 9->simetrico al frame 1
+-frame 11->simetrico al frame 3
+-frame 13->simetrico al frame 5
+-frame 17->copia del frame 1
+
+
+Ciclo de salto:
+
+-mover el muñeco arriba del cubo y bajar brazos. Seleccionar frames del root
+y duplicarlos hasta el 5 para que no se desplace.
+-frame 5->un pie un poco adelantado y el cuerpo bajado e inclinado hacia delante (encogido).
+-frame 7->con un pie en el suelo de puntillas y cuerpo inclinado hacia delante. La otra pierna flexionada hacia delante,
+brazos hacia delante3
+-frame 13->alcanza la maxima altura
+-frame 20->movemos el muñeco a la posicion final, subimos el centro de gravedad e inclinamos el cuerpo hacia atras. Un
+pie en el suelo con la punta levantada y la otra pierna flexionada. Cabeza ligeramente hacia arriba. Brazos atrasados
+-frame 25->ambos pies en el suelo, (mas omenos como la del frame 5)
+-frame 30->se levanta y mira hacia delante (como el frame 1)
+-modificar curvas para rompero las tangencias al pegar el salto y al llegar (borrar keyframe intermedio y mover la curva, etc.)
+y en la x que sea lineal
