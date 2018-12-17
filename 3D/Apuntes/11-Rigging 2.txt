@@ -1,0 +1,68 @@
+RIGGING 2
+
+primero se hace todo del lado izquierdo, luego se dulpica (no te pongas a hacer ambos lados , tonto :))
+
+ESPALDA
+-poner el modelo en modo wireframe
+-shift a armature single bone y ponerselo en el cuerpo, en el medio (parte gorda hacia abajo)
+(propiedades del esqueleto o armature->x-ray para ver los huesos sin el modo wireframe)
+-edit mode->hacer que el hueso llegue hasta la mitad (zona donde se estrecha el torso) y crear un hijo
+que llegue hasta las claviculas (hacer que de perfil siga la linea de la espalda
+-crear un hijo de este ultimo para el cuello que llegue hasta la cabeza
+
+CABEZA
+-crear otro mas para la cabeza y ponerlo en vertical
+-crear un hueso para el ojo en el centro de este, rotado horizontalmente de forma que la parte estrecha quede hacia delante
+y hacer que quedemas o menos del tamaño la mitad del ojo. Emparentar con el hueso de la cabeza
+
+BRAZO
+-crear hueso en el hombro horizontal que llegue hasta el codo y un hijo suyo que llegue hasta la muñeca. En tools->subdivide sobre el hueso del
+antebrazo (para hacer el giro de muñeca). Hcaer otro hijo para el hueso de la mano y otro hijo de este para los dedos (subdividir este ultimo para
+que se puedan flexionar los dedos). Creamos un nuevo hueso en el indice y subdividimos igual que el anterior, y lo mismo para el pulgar. Emparentar
+indice y pulgar con el hueso de la mano (keep offset). Emparentar de la misma forma el hueso del hombro con el torax
+
+PIERNA
+-crear un hueso donde naceria la pierna o femur y hasta la rodilla. Hijo hasta el tobillo, otro para el empeine y otro para la punta del pie (hueso
+de la rodilla un poco flexionado hacia delante). Seleccionar todos y hacer S X 0 (para escalar todo a 0 en la x). Emparentar el femur con el hueso del abdomen
+
+-renombrar todos los huesos con nombres caracteristicos (simbolo del hueso de la derecha)-> todo lo que es izquierdo .L, lo derecho .R
+
+PARTE DIFICIL
+-hacer un hueso hijo del talon y lo desemparentamos (alt p), y lo mismo desde la rodilla, pero este lo desplazamos hacia delante. Ir a las props del hueso hijo
+del talon y desactivamos la opcion de deform. Lo mismo con el de rodilla. Renombrarlos
+-modo pose y seleccionamos el hueso de menor rango que obedecera al hijo de la rodilla (tibia) y creamos cinamatica inversa con target hijo hueso del talon y 
+polo rodilla con 2 huesos que obedecen y pole angle -90 (todo esto en el simbolo del hueso con la cadena)
+-modo edicion y crear nuevo hueso en la planta del pie, que llegue de la punta al talon (parte gorda). LLamarle ControlPie.L y desactivar deform. Emparentar
+hueso del talon y de la rodilla con este nuevo hueso. Hacer que este hueso sea padre tambien del empeine. Meter un constraint en el empeine para que no se separe
+de la pierna nunca->copy location del hueso de la pierna y head/tail a 1
+-modo edicion y duplicar huesos del empeine y punta del pie. Desplazarlos un poco hacia arriba con control (tres hacia arriba). Desactivar deform de ambos. Llamarles
+control puntera y control puntillas, y hacerles hijos del control del pie. Eliminar el constraint de copyLocation del hueso puntillas. Seleccionar bounding box center
+en vez de active element (al lado del modo wireframe) y rotar 180 grados para que la parte gruesa quede unida al control puntera. Poner roll a 90 grados. Entrar a modo
+pose y ponerle inverse kinamtics a la punta del pie, con target control puntillas y longitud de la cadena 1 y desactivar use tail. Añadir copy rotation a la punta del
+pies y ponerle target control puntera, y que solo se copie la rotacion en y. Bjamos los controles otras tres unidades con control para que queden en la posicion inicial
+y hacer el hueso del talon hijo de control puntillas con connect.
+-seleccionar punta del pie a partir de su nombre en la jerarquia de arriba y ocultarlo (abajo del huesecito y en display->hide). Lo mismo con el hueso del empeine
+y con el del talon
+
+MIRADA
+-crep un nuevo hueso y lo pongo delante de los ojos y en horizontal (parte gorda hacia el ojo). LLmarle control mirada y desactivarle deform. Modo pose y añadir constraint 
+track to al hueso del ojo, con target control mirada
+
+GIRO DE MUÑECA
+-crear driver en los dos antebrazos de rotacion en y (click derecho en y, add drivers->manually...). En el panel nmnerico del graph editor (modo drivers)crear variable y 
+object armature, object hueso de la mano, type-> y rotation, y un poco mas arriba expr:variable/5. Lo mismo con antebrazo 2. Ocultar antebrazo 2
+
+DUPLICAR HUESOS
+-seleccionamos los huesos de la pierna, el brazo y el hueso del ojo, situar el cursor en el 0, 0, 0. Establecer centro de transformaciones sobre el cursor (a la izquierda 
+de las flechitas de trans y rot) y duplicamos. Esc para que se quede en la misma posicion, S, X, -1. Armature->flip names para que todos los .l se llamen .r, y borrar los 
+.001 (en edit mode, justo a la izq de edit mode, seleccionando todos los huesos de la izquierda). Modo pose, Ctrl A y establecemos como pose de reposo
+
+VINCULAR CON LA MALLA
+-modo objeto, seleccionar modelo, seleccionar esqueleto y emparentar with automatic weights
+-seleccionamos el modelo, y modo weight paint. Seleccionar los flequillos, las cejas y las pestañas usando L (para seleccionar conectados), seleccionar el icono del
+triangulito (vertices), target hueso de la cabeza, 100%
+-en weight paint y con el hueso del cuello seleccionado, a la izquierda pintamos con el pibcel de peso 0 y pintamos sobre la mandibula para que el cuello no le afecte
+-weight paint con el hombro, y pintar con peso 0 toda la zona hasta el hombro y con 30% la zona mas proxima de la axila, etc.
+
+
+

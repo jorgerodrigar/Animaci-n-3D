@@ -1,0 +1,33 @@
+rigging
+
+-create->armature->single bone (debajo de la geometria)
+-rotar 90 grados el hueso para dejarlo tumbado
+-modo edicion->con e extruimos para generar un nuevo hueso (similar a como haciamos con geometria)
+-modo pose->para que se quede en esa posicion, si lo mueves se quedara asi (cinematica directa)
+
+-primero se crean los huesos, luego se renombran y luego se emparentan (todo en edit mode)
+-1 crear->extruir habiendo pulsado en la cabeza del hueso para que salga otro hueso a partir de ahi y no de
+sus pies (como ocurre siempre)
+-extruir a partir del de arriba para crear dos mas (de la manera normal->saliendo de sus pies)
+-2 renombrar->ir al icono de hueso a la derecha para cada hueso y cambiarle el nombre. El ultimo llamarle target
+-3 emparentar->seleccionar hijo, seleccionar por ultimo el padre (pulsando shift) y ctrl+p->keep offset* (alt+p destruye
+el emparentamiento). Hacer solo con el primero, ya que los demas son hijos de este al haberlos creado de la forma normal
+(*keep offset crea al hijo desde donde este y connect desde los pies)
+
+-crear un hueso mas, alejado, para controlar la apertura u orientacion (como la rodilla del pive)->extruimos para crearlo
+en el medio y alt+p->clear parent para desemparentarlo. Moverlo a un lado y llamarle polo. Hacerle hijo del primer hueso
+de todos con keep offset
+
+-en pose mode, seleccionar todos los huesos y ctrl+a->aplicar pose como pose de reposo. Si hacemos alt+r volveremos a 
+esa pose de reposo (al resetear)
+
+-hasta aqui si quisieramos dejarlo con cinematica directa
+
+-cinamtica inversa->hacer hijo el ultimo hueso (target) del primero con keep offset. De los que van a obedecer a traget,
+el de menor jerarquia->icono de hueso con cadena->add bone constraint->inverse kinematics (se pondra en amarillo). Target->
+seleccionar armature, y en hueso, seleccionar target. Pole Target->armature, polo. Longitud de la cadena->en este caso dos
+huesos (todos los que queremos que sigan al target). Pole Angle = -90 para restaurar la apertura
+
+-bloquear los manejadores de la derecha de los huesos que sean movidos por target con el candado
+
+-hacer corto de 10 segundos similar al de pixar
